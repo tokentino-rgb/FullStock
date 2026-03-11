@@ -1,0 +1,62 @@
+/* Estilos básicos para replicar la estructura visual de la imagen */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header, footer {
+    padding: 20px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+}
+
+header {
+    border-top: none; /* El header solo tiene línea abajo en la imagen */
+}
+
+footer {
+    border-bottom: none; /* El footer solo tiene línea arriba en la imagen */
+}
+
+main {
+    max-width: 800px; /* Limita el ancho para que la lectura sea cómoda */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-bottom: 20px;
+    padding-left: 20px; /* Espacio para las viñetas */
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li strong {
+    color: #000; /* Resalta las negritas de los valores */
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+p {
+    margin-bottom: 15px;
+}
