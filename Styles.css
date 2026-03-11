@@ -1,4 +1,6 @@
-/* Estilos básicos para replicar la estructura visual de la imagen */
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
 body {
     font-family: sans-serif;
     margin: 0;
@@ -7,23 +9,33 @@ body {
     line-height: 1.6;
 }
 
-header, footer {
-    padding: 20px;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    font-weight: bold;
-}
-
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================= */
 header {
-    border-top: none; /* El header solo tiene línea abajo en la imagen */
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el logo y los enlaces */
 }
 
-footer {
-    border-bottom: none; /* El footer solo tiene línea arriba en la imagen */
+header .logo {
+    font-weight: bold;
+    color: #000;
 }
 
+header nav a {
+    margin-right: 15px;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+   ========================================= */
 main {
-    max-width: 800px; /* Limita el ancho para que la lectura sea cómoda */
+    max-width: 800px;
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -41,7 +53,7 @@ h2 {
 
 ul {
     margin-bottom: 20px;
-    padding-left: 20px; /* Espacio para las viñetas */
+    padding-left: 20px;
 }
 
 li {
@@ -49,14 +61,23 @@ li {
 }
 
 li strong {
-    color: #000; /* Resalta las negritas de los valores */
-}
-
-a {
-    color: blue;
-    text-decoration: underline;
+    color: #000;
 }
 
 p {
     margin-bottom: 15px;
+}
+
+main a {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+footer {
+    padding: 20px;
+    border-top: 1px solid #000;
+    font-weight: bold;
 }
