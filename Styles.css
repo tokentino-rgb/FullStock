@@ -11,74 +11,139 @@ body {
 }
 
 /* =========================================
-   ENCABEZADO Y NAVEGACIÓN
+   HEADER (Paso 4 y 5)
    ========================================= */
 header {
-    padding: 20px;
-    border-bottom: 1px solid #000;
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Espacio entre el logo y los enlaces */
+    padding: 15px 40px;
+    border-bottom: 1px solid #ddd;
+    /* Criterio de éxito: Flexbox para alinear los tres grupos (Logo, Nav, Carrito) */
+    display: flex; 
+    justify-content: space-between; /* Envía los elementos a los extremos */
+    align-items: center; /* Los centra verticalmente */
+    background-color: #fff;
 }
 
-header .logo {
+header .logo-container .logo {
     font-weight: bold;
-    color: #000;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style: none; /* Quita las viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox para poner los enlaces en línea */
+    gap: 20px; /* Espacio entre los enlaces */
+    align-items: center;
 }
 
 header nav a {
-    margin-right: 15px;
-    color: blue;
-    text-decoration: underline;
+    text-decoration: none;
+    color: #555;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
 }
 
-/* =========================================
+header nav a:hover {
+    color: #000;
+}
+
+header .cart-container .cart-link {
+    text-decoration: none;
+    color: #333;
+}
+
+header .cart-container .cart-icon {
+    font-size: 1.5em;
+}
+
+/* 
    CONTENIDO PRINCIPAL
    ========================================= */
 main {
-    max-width: 800px;
+    max-width: 1100px; /* Limita el ancho para que la lectura sea cómoda */
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+/* =========================================
+   SECCIÓN DE CATEGORÍAS (Paso 6, 7 y 8)
+   ========================================= */
+
+.categorias {
+    text-align: left; /* CORRECCIÓN: Alineado a la izquierda como la maqueta */
+    margin-bottom: 60px;
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-ul {
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-
-li {
+.categorias h2 {
+    font-size: 2.2em;
     margin-bottom: 10px;
-}
-
-li strong {
     color: #000;
 }
 
-p {
-    margin-bottom: 15px;
+.categorias > p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 40px;
+    max-width: 800px; /* Limita un poco el ancho del párrafo para que se vea como en la imagen */
 }
 
-main a {
-    color: blue;
-    text-decoration: underline;
+.grid-categorias {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+    justify-content: space-between; /* Distribuye el espacio entre las columnas */
 }
 
-/* =========================================
-   PIE DE PÁGINA
-   ========================================= */
+.tarjeta-categoria {
+    flex: 1 1 calc(33.333% - 30px); 
+    min-width: 280px; 
+
+    display: flex; 
+    flex-direction: column;
+}
+
+/* Contenedor con aspect-ratio */
+.imagen-contenedor {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Proporción cuadrada */
+    border-radius: 12px; /* CORRECCIÓN: El borde redondeado va directo en la imagen */
+    overflow: hidden;
+    margin-bottom: 15px; /* Espacio entre la foto y el título del producto */
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+} 
+
+
+.texto-contenedor {
+    text-align: left;
+}
+
+.tarjeta-categoria h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+    color: #000;
+}
+
+.tarjeta-categoria p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #777;
+    line-height: 1.4;
+}
+
+
 footer {
-    padding: 20px;
-    border-top: 1px solid #000;
+    padding: 30px 0;
+    border-top: 1px solid #ddd;
+    text-align: left;
     font-weight: bold;
+    color: #333;
+    margin-top: 40px;
 }
