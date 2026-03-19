@@ -1,5 +1,5 @@
 /* =========================================
-   ESTILOS GENERALES
+   1. ESTILOS BASE (MÓVIL - DEFAULT)
    ========================================= */
 body {
     font-family: sans-serif;
@@ -7,35 +7,43 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.6;
-    background-color: #fcfcfc; /* Un fondo muy claro como en la maqueta */
-}
-
-/* =========================================
-   HEADER (Paso 4 y 5)
-   ========================================= */
-header {
-    padding: 15px 40px;
-    border-bottom: 1px solid #ddd;
-    /* Criterio de éxito: Flexbox para alinear los tres grupos (Logo, Nav, Carrito) */
-    display: flex; 
-    justify-content: space-between; /* Envía los elementos a los extremos */
-    align-items: center; /* Los centra verticalmente */
     background-color: #fff;
 }
 
-header .logo-container .logo {
+/* Padding base para los contenedores en móvil */
+header, .hero-section, .categorias, footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* === HEADER === */
+header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+header .logo {
     font-weight: bold;
     color: #333;
     text-decoration: none;
     font-size: 1.5em;
 }
 
+/* Instrucción: Barra de navegación oculta por ahora */
+header nav {
+    display: none; 
+}
+
 header nav ul {
-    list-style: none; /* Quita las viñetas de la lista */
+    list-style: none; 
     margin: 0;
     padding: 0;
-    display: flex; /* Flexbox para poner los enlaces en línea */
-    gap: 20px; /* Espacio entre los enlaces */
+    display: flex; 
+    gap: 20px; 
     align-items: center;
 }
 
@@ -46,160 +54,165 @@ header nav a {
     transition: color 0.3s ease;
 }
 
-header nav a:hover {
-    color: #000;
-}
+header nav a:hover { color: #000; }
+header .cart-link { text-decoration: none; color: #333; }
+header .cart-icon { font-size: 1.5em; }
 
-header .cart-container .cart-link {
-    text-decoration: none;
-    color: #333;
-}
-
-header .cart-container .cart-icon {
-    font-size: 1.5em;
-}
-
-/* 
-   CONTENIDO PRINCIPAL
-   ========================================= */
-main {
-   
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-/* =========================================
-   SECCIÓN HERO
-   ========================================= */
+/* === SECCIÓN HERO === */
 .hero-section {
-    /* Altura mínima para que se vea amplia como en la imagen */
-    min-height: 60vh; 
-    
-    /* Propiedades de Background: 
-       1. Un gradiente negro semi-transparente para oscurecer la foto
-       2. La foto de fondo (puedes cambiar este enlace por una tuya luego) */
+    min-height: 70vh; /* Un poco más alto en móvil para que luzca bien */
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('img/hero.jpg');
-    background-size: cover; /* Cubre todo el espacio sin deformarse */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat;
-    
-    /* Layout con Flexbox para centrar el contenido perfectamente */
+        url('img/hero.jpg'); /* Asegúrate de que tu ruta sea correcta */
+    background-size: cover; 
+    background-position: center; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .hero-content h1 {
     color: #ffffff;
-    font-size: 3.5em; /* Un título muy grande */
+    font-size: 2.2em; /* Tamaño móvil */
+    line-height: 1.2; /* Alto de línea móvil */
     margin-bottom: 15px;
-    max-width: 800px;
-    line-height: 1.1;
 }
 
 .hero-content p {
     color: #f0f0f0;
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 30px;
-    max-width: 600px;
 }
 
 .btn-hero {
-    background-color: #5b6cf9; /* Azul similar al de la maqueta */
+    background-color: #5b6cf9; 
     color: #ffffff;
-    padding: 15px 35px;
+    padding: 12px 25px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
 }
 
-.btn-hero:hover {
-    background-color: #4857d9; /* Azul un poco más oscuro al pasar el mouse */
-}
-/* =========================================
-   SECCIÓN DE CATEGORÍAS (Paso 6, 7 y 8)
-   ========================================= */
-
+/* === CATEGORÍAS === */
 .categorias {
-    text-align: left;
-    margin: 60px auto; /* Lo centra horizontalmente */
-    max-width: 1100px; /* Le devuelve el límite de lectura cómodo */
-    padding: 0 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .categorias h2 {
-    font-size: 2.2em;
+    font-size: 1.8em; /* Tamaño móvil */
+    line-height: 1.2;
     margin-bottom: 10px;
     color: #000;
 }
 
 .categorias > p {
-    color: #555;
+    color: #666;
     font-size: 1em;
-    margin-bottom: 40px;
-    max-width: 800px; /* Limita un poco el ancho del párrafo para que se vea como en la imagen */
+    margin-bottom: 30px;
 }
 
 .grid-categorias {
     display: flex;
-    flex-wrap: wrap; 
+    flex-direction: column; /* Instrucción: Lista en dirección vertical */
     gap: 30px;
-    justify-content: space-between; /* Distribuye el espacio entre las columnas */
 }
 
 .tarjeta-categoria {
-    flex: 1 1 calc(33.333% - 30px); 
-    min-width: 280px; 
-
     display: flex; 
     flex-direction: column;
+    text-align: left;
 }
 
-/* Contenedor con aspect-ratio */
 .imagen-contenedor {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Proporción cuadrada */
-    border-radius: 12px; /* CORRECCIÓN: El borde redondeado va directo en la imagen */
+    aspect-ratio: 1 / 1; /* Instrucción: Ratio 1x1 en móvil */
+    border-radius: 12px; 
     overflow: hidden;
-    margin-bottom: 15px; /* Espacio entre la foto y el título del producto */
+    margin-bottom: 15px; 
 }
 
 .imagen-contenedor img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
-} 
-
-
-.texto-contenedor {
-    text-align: left;
 }
 
-.tarjeta-categoria h3 {
-    margin: 0 0 8px 0;
-    font-size: 1.1em;
-    color: #000;
-}
+.tarjeta-categoria h3 { margin: 0 0 8px 0; font-size: 1.2em; color: #000; }
+.tarjeta-categoria p { margin: 0; font-size: 0.95em; color: #666; line-height: 1.5; }
 
-.tarjeta-categoria p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #777;
-    line-height: 1.4;
-}
-
-
+/* === FOOTER === */
 footer {
-    padding: 30px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-top: 1px solid #ddd;
-    text-align: left;
     font-weight: bold;
     color: #333;
-    margin-top: 40px;
+}
+
+
+/* =========================================
+   2. PANTALLAS MEDIANAS EN ADELANTE (Tablets)
+   ========================================= */
+@media (min-width: 40rem) { /* 40rem = 640px */
+    
+    /* Instrucción: Se incrementa el padding a 1.5rem */
+    header, .hero-section, .categorias, footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    /* Instrucción: Barra de navegación visible */
+    header nav {
+        display: block; 
+    }
+
+    /* Instrucción: Modifican su tamaño y alto de línea */
+    .hero-content h1 {
+        font-size: 3.5em; 
+        line-height: 1.1;
+    }
+    
+    .categorias h2 {
+        font-size: 2.2em;
+    }
+
+    /* Instrucción: Lista de categorías en dirección horizontal */
+    .grid-categorias {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+
+    .tarjeta-categoria {
+        flex: 1 1 calc(33.333% - 20px); /* Ocupan un tercio del ancho */
+    }
+
+    /* Instrucción: Ratio de aspecto de 4 x 5 */
+    .imagen-contenedor {
+        aspect-ratio: 4 / 5; 
+    }
+}
+
+
+/* =========================================
+   3. PANTALLAS GRANDES EN ADELANTE (Computadoras)
+   ========================================= */
+@media (min-width: 64rem) { /* 64rem = 1024px */
+    
+    /* Instrucción: Se incrementa el padding a 2rem */
+    header, .hero-section, .categorias, footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* Opcional pero recomendado: Centrar el contenido para que no se estire infinito en monitores gigantes */
+    header, .categorias, footer {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
