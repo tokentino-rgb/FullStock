@@ -63,18 +63,74 @@ header .cart-container .cart-icon {
    CONTENIDO PRINCIPAL
    ========================================= */
 main {
-    max-width: 1100px; /* Limita el ancho para que la lectura sea cómoda */
+   
     margin: 0 auto;
     padding: 40px 20px;
 }
+/* =========================================
+   SECCIÓN HERO
+   ========================================= */
+.hero-section {
+    /* Altura mínima para que se vea amplia como en la imagen */
+    min-height: 60vh; 
+    
+    /* Propiedades de Background: 
+       1. Un gradiente negro semi-transparente para oscurecer la foto
+       2. La foto de fondo (puedes cambiar este enlace por una tuya luego) */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('img/hero.jpg');
+    background-size: cover; /* Cubre todo el espacio sin deformarse */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    
+    /* Layout con Flexbox para centrar el contenido perfectamente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
 
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 3.5em; /* Un título muy grande */
+    margin-bottom: 15px;
+    max-width: 800px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    color: #f0f0f0;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.btn-hero {
+    background-color: #5b6cf9; /* Azul similar al de la maqueta */
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #4857d9; /* Azul un poco más oscuro al pasar el mouse */
+}
 /* =========================================
    SECCIÓN DE CATEGORÍAS (Paso 6, 7 y 8)
    ========================================= */
 
 .categorias {
-    text-align: left; /* CORRECCIÓN: Alineado a la izquierda como la maqueta */
-    margin-bottom: 60px;
+    text-align: left;
+    margin: 60px auto; /* Lo centra horizontalmente */
+    max-width: 1100px; /* Le devuelve el límite de lectura cómodo */
+    padding: 0 20px;
 }
 
 .categorias h2 {
