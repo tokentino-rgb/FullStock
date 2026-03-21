@@ -1,3 +1,54 @@
+
+/* =========================================
+   NUESTRA PROMESA DE CALIDAD
+   ========================================= */
+.promesa-calidad {
+    background-color: #fafafa; /* Mismo fondo del footer para que se unan visualmente */
+    padding: 60px 20px 20px 20px;
+    text-align: center;
+}
+
+.promesa-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.promesa-calidad h2 {
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    color: #111;
+}
+
+.grid-promesas {
+    display: flex;
+    flex-direction: column; /* Móvil: Apilados verticalmente */
+    gap: 40px;
+}
+
+.promesa-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promesa-item .icono {
+    font-size: 2.5em; /* Tamaño grande para el ícono */
+    margin-bottom: 15px;
+}
+
+.promesa-item h3 {
+    font-size: 1.05em;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.promesa-item p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+    max-width: 250px; /* Evita que el texto sea muy ancho */
+}
+
 /* =========================================
    1. ESTILOS BASE (MÓVIL - DEFAULT)
    ========================================= */
@@ -160,6 +211,15 @@ footer {
    ========================================= */
 @media (min-width: 40rem) { /* 40rem = 640px */
     
+    .grid-promesas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .promesa-item {
+        flex: 1 1 calc(50% - 40px); /* 2 columnas en Tablet */
+    }
     /* Instrucción: Se incrementa el padding a 1.5rem */
     header, .hero-section, .categorias, footer {
         padding-left: 1.5rem;
@@ -202,6 +262,10 @@ footer {
    3. PANTALLAS GRANDES EN ADELANTE (Computadoras)
    ========================================= */
 @media (min-width: 64rem) { /* 64rem = 1024px */
+
+    .promesa-item {
+        flex: 1; /* 4 columnas (todos en una fila) en Desktop */
+    }
     
     /* Instrucción: Se incrementa el padding a 2rem */
     header, .hero-section, .categorias, footer {
@@ -215,4 +279,186 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+
+/* Criterio de Éxito: Esto oculta visualmente el <label> pero los lectores 
+   de pantalla para personas con discapacidad visual sí lo leerán. */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* =========================================
+   4. FOOTER - ESTILOS BASE (Móvil First)
+   ========================================= */
+footer {
+    background-color: #fafafa; /* Fondo sutilmente grisáceo/blanco */
+    padding-top: 50px;
+}
+
+.footer-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Separación vertical entre los enlaces y el boletín */
+}
+
+/* --- Columnas de Enlaces --- */
+.footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.columna-footer h3 {
+    font-size: 1.05em;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.columna-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Separación entre cada enlace */
+}
+
+.columna-footer a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.columna-footer a:hover {
+    color: #000;
+}
+
+/* --- Boletín y Formulario --- */
+.footer-boletin h3 {
+    font-size: 1.1em;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.footer-boletin p {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    max-width: 500px;
+}
+
+.formulario-suscripcion {
+    display: flex;
+    flex-direction: column; /* En celular, el botón va debajo del input */
+    gap: 10px;
+}
+
+.formulario-suscripcion input {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    outline: none;
+    font-family: inherit;
+}
+
+.formulario-suscripcion input:focus {
+    border-color: #777; /* Cambia de color sutilmente al hacer clic */
+}
+
+.formulario-suscripcion button {
+    padding: 12px 20px;
+    background-color: #f1f1f1; /* Botón gris claro como en la referencia */
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-suscripcion button:hover {
+    background-color: #e2e2e2; /* Se oscurece un poco al pasar el mouse */
+}
+
+/* --- Derechos de Autor --- */
+.footer-derechos {
+    margin-top: 40px;
+    padding: 25px 0;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+}
+
+
+
+/* Tablets (>= 640px) */
+@media (min-width: 40rem) {
+    .footer-enlaces {
+        flex-direction: row; /* Las columnas se ponen lado a lado */
+        gap: 80px; /* Separación horizontal entre columnas */
+    }
+
+    .formulario-suscripcion {
+        flex-direction: row; /* El botón se pone al lado del input */
+    }
+
+    .formulario-suscripcion input {
+        width: 320px; /* Le damos un ancho fijo al input para que no estire de más */
+    }
+}
+
+/* Computadoras (>= 1024px) */
+@media (min-width: 64rem) {
+    .footer-enlaces {
+        gap: 120px; /* Aumentamos el espacio entre columnas para aprovechar la pantalla grande */
+    }
+}
+
+/* =========================================
+   ESTILOS PARA PÁGINAS DE TEXTO (Legales, Quienes Somos)
+   ========================================= */
+.contenido-texto {
+    max-width: 800px; /* Limita el ancho para una lectura cómoda */
+    margin: 60px auto; /* Lo centra en la pantalla */
+    padding: 0 20px;
+}
+
+.contenido-texto h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.contenido-texto h2 {
+    font-size: 1.5em;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.contenido-texto p, .contenido-texto ul {
+    font-size: 1.05em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.contenido-texto li {
+    margin-bottom: 10px;
+}
+
+.contenido-texto a {
+    color: #5b6cf9;
+    text-decoration: underline;
 }

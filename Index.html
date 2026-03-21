@@ -7,24 +7,18 @@
     <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
-
-    <header>
+<header>
         <div class="logo-container">
             <a href="index.html" class="logo">Full Stock</a>
         </div>
-
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#polos">Polos</a></li>
-                <li><a href="#tazas">Tazas</a></li>
-                <li><a href="#stickers">Stickers</a></li>
                 <li><a href="about.html">Quienes somos</a></li>
                 <li><a href="privacy.html">Privacidad</a></li>
                 <li><a href="terms.html">Términos y Condiciones</a></li>
             </ul>
         </nav>
-
         <div class="cart-container">
             <a href="#" class="cart-link" aria-label="Ver carrito">
                 <span class="cart-icon">🛒</span>
@@ -81,8 +75,82 @@
         </section>
     </main>
 
-    <footer>
-        <p>Footer</p>
+    <section class="promesa-calidad">
+        <div class="promesa-contenedor">
+            <h2>Nuestra Promesa de Calidad</h2>
+            
+            <div class="grid-promesas">
+                <article class="promesa-item">
+                    <div class="icono">🚚</div>
+                    <h3>Entrega rápida</h3>
+                    <p>Recibe tus productos en tiempo récord, directo a tu puerta, para que puedas disfrutar de ellos cuanto antes.</p>
+                </article>
+                
+                <article class="promesa-item">
+                    <div class="icono">👕</div>
+                    <h3>Satisfacción Garantizada</h3>
+                    <p>Tu felicidad es nuestra prioridad. Si no estás 100% satisfecho, estamos aquí para ayudarte con cambios o devoluciones.</p>
+                </article>
+                
+                <article class="promesa-item">
+                    <div class="icono">🏅</div>
+                    <h3>Materiales de Alta Calidad</h3>
+                    <p>Nos aseguramos de que todos nuestros productos estén hechos con materiales de la más alta calidad.</p>
+                </article>
+                
+                <article class="promesa-item">
+                    <div class="icono">💡</div>
+                    <h3>Diseños Exclusivos</h3>
+                    <p>Cada producto está diseñado pensando en los desarrolladores, con estilos únicos que no encontrarás en ningún otro lugar.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+  <footer>
+        <div class="footer-contenedor">
+            <div class="footer-enlaces">
+                <div class="columna-footer">
+                    <h3>Tienda</h3>
+                    <ul>
+                        <li><a href="index.html#polos">Polos</a></li>
+                        <li><a href="index.html#tazas">Tazas</a></li>
+                        <li><a href="index.html#stickers">Stickers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="columna-footer">
+                    <h3>Compañía</h3>
+                    <ul>
+                        <li><a href="about.html">Quienes somos</a></li>
+                        <li><a href="terms.html">Términos y condiciones</a></li>
+                        <li><a href="privacy.html">Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="columna-footer">
+                    <h3>Conecta</h3>
+                    <ul>
+                        <li><a href="https://wa.me/" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-boletin">
+                <h3>Suscríbete a nuestro boletín</h3>
+                <p>Recibe las últimas ofertas y descuentos en tu correo semanalmente.</p>
+                <form class="formulario-suscripcion">
+                    <label for="email-boletin" class="sr-only">Correo electrónico</label>
+                    <input type="email" id="email-boletin" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-derechos">
+            <p>Todos los derechos reservados &copy; Full Stock</p>
+        </div>
     </footer>
 
 </body>

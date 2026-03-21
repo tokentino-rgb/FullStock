@@ -9,15 +9,25 @@
 <body>
 
     <header>
-        <span class="logo">Full Stock</span>
+        <div class="logo-container">
+            <a href="index.html" class="logo">Full Stock</a>
+        </div>
         <nav>
-            <a href="about.html">Quienes somos</a>
-            <a href="privacy.html">Privacidad</a>
-            <a href="terms.html">Términos y Condiciones</a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Quienes somos</a></li>
+                <li><a href="privacy.html">Privacidad</a></li>
+                <li><a href="terms.html">Términos y Condiciones</a></li>
+            </ul>
         </nav>
+        <div class="cart-container">
+            <a href="#" class="cart-link" aria-label="Ver carrito">
+                <span class="cart-icon">🛒</span>
+            </a>
+        </div>
     </header>
 
-    <main>
+   <main class="contenido-texto">
         <h1>Política de Privacidad</h1>
         
         <p><strong>Última actualización: 17 de octubre de 2025</strong></p>
@@ -72,7 +82,49 @@
     </main>
 
     <footer>
-        Footer
+        <div class="footer-contenedor">
+            <div class="footer-enlaces">
+                <div class="columna-footer">
+                    <h3>Tienda</h3>
+                    <ul>
+                        <li><a href="index.html#polos">Polos</a></li>
+                        <li><a href="index.html#tazas">Tazas</a></li>
+                        <li><a href="index.html#stickers">Stickers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="columna-footer">
+                    <h3>Compañía</h3>
+                    <ul>
+                        <li><a href="about.html">Quienes somos</a></li>
+                        <li><a href="terms.html">Términos y condiciones</a></li>
+                        <li><a href="privacy.html">Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="columna-footer">
+                    <h3>Conecta</h3>
+                    <ul>
+                        <li><a href="https://wa.me/" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-boletin">
+                <h3>Suscríbete a nuestro boletín</h3>
+                <p>Recibe las últimas ofertas y descuentos en tu correo semanalmente.</p>
+                <form class="formulario-suscripcion">
+                    <label for="email-boletin" class="sr-only">Correo electrónico</label>
+                    <input type="email" id="email-boletin" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-derechos">
+            <p>Todos los derechos reservados &copy; Full Stock</p>
+        </div>
     </footer>
 
 </body>
