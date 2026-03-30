@@ -1,0 +1,76 @@
+/* =========================================
+   COMPONENTE: CONTENT (Para páginas de texto)
+   ========================================= */
+.content {
+    color: var(--foreground);
+    font-family: var(--family-text);
+}
+
+.content h1, .content h2, .content h3, .content h4 {
+    font-family: var(--family-heading);
+    color: var(--foreground);
+}
+
+.content h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.content h2 { font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+.content h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+.content h4 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+
+/* Figma: Cualquier elemento a continuación de un H2, H3, H4 o HR no deberá tener margen superior */
+.content h2 + *, .content h3 + *, .content h4 + *, .content hr + * { 
+    margin-top: 0; 
+}
+
+.content p { margin-bottom: 1.5rem; line-height: 1.6; }
+.content li > p { margin-top: 0.75rem; margin-bottom: 0.75rem; }
+
+.content strong { font-weight: bold; }
+.content em { font-style: italic; }
+.content a { color: var(--accent-11); text-decoration: underline; }
+
+/* Figma: Configuración estricta para código y preformateado */
+.content code {
+    font-family: var(--family-code, monospace);
+    font-size: 87.5%;
+    background-color: var(--muted-background);
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+}
+.content code::before, .content code::after { content: "`"; }
+
+.content pre {
+    background-color: var(--neutral-12);
+    color: var(--neutral-1);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+.content pre code {
+    background-color: transparent; padding: 0; font-size: inherit; color: inherit;
+}
+.content pre code::before, .content pre code::after { content: none; }
+
+.content ul, .content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.content li { margin-bottom: 0.5rem; }
+
+.content hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0; /* 48px = 3rem */
+}
+
+.content img { max-width: 100%; height: auto; border-radius: 0.5rem; margin-bottom: 1.5rem; }
+.content figure { margin: 0 0 1.5rem 0; }
+.content figcaption { color: var(--muted-foreground); font-size: 0.875rem; text-align: center; margin-top: 0.5rem; }
+
+/* Figma: Blockquote con comillas */
+.content blockquote {
+    border-left: 4px solid var(--border);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--muted-foreground);
+    font-style: italic;
+}
+.content blockquote p:first-of-type::before { content: open-quote; }
+.content blockquote p:last-of-type::after { content: close-quote; }

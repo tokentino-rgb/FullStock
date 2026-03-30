@@ -8,26 +8,32 @@
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <a href="index.html" class="logo">Full Stock</a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Quienes somos</a></li>
-                <li><a href="privacy.html">Privacidad</a></li>
-                <li><a href="terms.html">Términos y Condiciones</a></li>
-            </ul>
-        </nav>
-        <div class="cart-container">
-            <a href="#" class="cart-link" aria-label="Ver carrito">
-                <span class="cart-icon">🛒</span>
-            </a>
+  <header class="main-header">
+        <div class="container main-header__container">
+            <a href="index.html" class="main-header__logo">Full Stock</a>
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="nav-item"><a href="index.html" class="nav-item__link">Inicio</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-item__link">Quienes somos</a></li>
+                    <li class="nav-item"><a href="privacy.html" class="nav-item__link">Privacidad</a></li>
+                    <li class="nav-item"><a href="terms.html" class="nav-item__link">Términos y Condiciones</a></li>
+                </ul>
+            </nav>
+            <div class="main-header__cart">
+                <a href="#" class="button button--icon button--ghost" aria-label="Ver carrito">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
     </header>
 
-        <main class="contenido-texto">
+   <main class="section content">
+    <div class="container">
+       
         <h1>Términos y Condiciones</h1>
         
         <p><strong>Última actualización: 17 de octubre de 2025</strong></p>
@@ -82,51 +88,59 @@
         <h2>9. Contacto</h2>
         <p>Si tienes alguna pregunta sobre estos Términos y Condiciones, puedes contactarnos a través de nuestro formulario de contacto o enviando un correo a <a href="mailto:contacto-fullstock@codeable.la">contacto-fullstock@codeable.la</a>.</p>
 
-    </main>
+  </div> </main>
 
-   <footer>
-        <div class="footer-contenedor">
-            <div class="footer-enlaces">
-                <div class="columna-footer">
-                    <h3>Tienda</h3>
-                    <ul>
-                        <li><a href="index.html#polos">Polos</a></li>
-                        <li><a href="index.html#tazas">Tazas</a></li>
-                        <li><a href="index.html#stickers">Stickers</a></li>
-                    </ul>
-                </div>
+<footer class="section main-footer">
+        <div class="container">
+            <div class="main-footer__container">
                 
-                <div class="columna-footer">
-                    <h3>Compañía</h3>
-                    <ul>
-                        <li><a href="quienes-somos.html">Quienes somos</a></li>
-                        <li><a href="terminos.html">Términos y condiciones</a></li>
-                        <li><a href="privacidad.html">Privacidad</a></li>
-                    </ul>
+                <div class="main-footer__content">
+                    <div class="links-group">
+                        <h3 class="links-group__title">Tienda</h3>
+                        <ul class="links-group__list">
+                            <li><a href="index.html#polos" class="links-group__link">Polos</a></li>
+                            <li><a href="index.html#tazas" class="links-group__link">Tazas</a></li>
+                            <li><a href="index.html#stickers" class="links-group__link">Stickers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-group">
+                        <h3 class="links-group__title">Compañía</h3>
+                        <ul class="links-group__list">
+                            <li><a href="quienes-somos.html" class="links-group__link">Quienes somos</a></li>
+                            <li><a href="terminos.html" class="links-group__link">Términos y condiciones</a></li>
+                            <li><a href="privacidad.html" class="links-group__link">Privacidad</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links-group">
+                        <h3 class="links-group__title">Conecta</h3>
+                        <ul class="links-group__list">
+                            <li><a href="https://wa.me/" target="_blank" class="links-group__link">WhatsApp</a></li>
+                            <li><a href="https://www.facebook.com/" target="_blank" class="links-group__link">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank" class="links-group__link">Instagram</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="columna-footer">
-                    <h3>Conecta</h3>
-                    <ul>
-                        <li><a href="https://wa.me/" target="_blank">WhatsApp</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-                    </ul>
+                <div class="main-footer__newsletter">
+                    <form class="newsletter-form">
+                        <h3 class="newsletter-form__title">Suscríbete a nuestro boletín</h3>
+                        <p class="newsletter-form__description">Recibe las últimas ofertas y descuentos en tu correo semanalmente.</p>
+                        
+                        <div class="newsletter-form__group">
+                            <label for="email-boletin" class="sr-only">Correo electrónico</label>
+                            <input type="email" id="email-boletin" class="newsletter-form__input" placeholder="correo@dominio.com" required>
+                            <button type="submit" class="button button--secondary">Suscribirse</button>
+                        </div>
+                    </form>
                 </div>
+
             </div>
 
-            <div class="footer-boletin">
-                <h3>Suscríbete a nuestro boletín</h3>
-                <p>Recibe las últimas ofertas y descuentos en tu correo semanalmente.</p>
-                <form class="formulario-suscripcion">
-                    <label for="email-boletin" class="sr-only">Correo electrónico</label>
-                    <input type="email" id="email-boletin" required>
-                    <button type="submit">Suscribirse</button>
-                </form>
+            <div class="main-footer__copyright">
+                <p>Todos los derechos reservados &copy; Full Stock</p>
             </div>
-        </div>
-        <div class="footer-derechos">
-            <p>Todos los derechos reservados &copy; Full Stock</p>
         </div>
     </footer>
 </body>

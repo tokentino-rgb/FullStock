@@ -1,0 +1,12 @@
+/* =========================================
+   GLOBAL
+   ========================================= */
+body {
+    font-family: var(--family-text);
+    color: var(--foreground);
+    background-color: var(--background); /* Esto hará que el fondo cambie a oscuro */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color-scheme: light dark; /* Le avisa al navegador que soportas ambos modos */
+}

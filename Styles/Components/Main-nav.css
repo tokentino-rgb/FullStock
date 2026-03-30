@@ -1,0 +1,24 @@
+/* =========================================
+   COMPONENTE: MAIN NAV (Contenedor de enlaces)
+   ========================================= */
+.main-nav {
+    display: none; /* Oculto por defecto en móvil */
+}
+
+.main-nav__list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tablets (>= 40rem) */
+@media (min-width: 40rem) {
+    .main-nav {
+        display: block;
+        margin-left: auto; /* Empuja la navegación hacia la derecha */
+        margin-right: 2rem; /* Lo separa del carrito */
+    }
+}

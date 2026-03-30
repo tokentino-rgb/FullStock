@@ -1,0 +1,23 @@
+/* =========================================
+   COMPONENTE: MAIN HEADER
+   ========================================= */
+.main-header {
+    background-color: var(--background); /* Asegura que el fondo del header también cambie en modo oscuro */
+    border-bottom: 1px solid var(--border);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.main-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header__logo {
+    font-family: var(--family-heading);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--foreground);
+    text-decoration: none;
+}

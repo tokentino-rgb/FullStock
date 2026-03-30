@@ -1,0 +1,54 @@
+/* =========================================
+   COMPONENTE: HERO
+   ========================================= */
+.hero {
+    /* Mantenemos el ../ para que encuentre la imagen desde la carpeta Styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero__title {
+    color: var(--white);
+    font-family: var(--family-heading);
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.hero__description {
+    color: var(--neutral-4); /* Un gris muy clarito para contrastar con el fondo oscuro */
+    font-family: var(--family-text);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Tablets (>= 40rem) */
+@media (min-width: 40rem) {
+    .hero__title {
+        font-size: 3.5rem;
+    }
+    .hero__description {
+        font-size: 1.125rem;
+    }
+}
+
+/* Computadoras (>= 64rem) */
+@media (min-width: 64rem) {
+    .hero__title {
+        font-size: 4rem;
+    }
+}

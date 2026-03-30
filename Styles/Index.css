@@ -1,23 +1,27 @@
 
 
-/* 1. Foundation (Bases) */
-@import url("Tokens.css");
-@import url("Reset.css");
-@import url("Global.css");
+/* 1. Foundation */
+@import url("Foundation/Tokens.css");
+@import url("Foundation/Reset.css");
+@import url("Foundation/Global.css");
  
-
-/* 2. Layout (Estructura) */
-@import url("Layout/Container.css"); 
-@import url("Layout/Section.css"); 
+/* 2. Layout */
+@import url("Layout/Container.css");
+@import url("Layout/Section.css");
 @import url("Layout/Section-sm.css");
  
 /* 3. Components */
-@import url("Components.css"); 
+@import url("Components/Main-header.css");
+@import url("Components/Main-nav.css");
+@import url("Components/Nav-item.css");
+@import url("Components/Hero.css");
 @import url("Components/Categories.css");
 @import url("Components/Category.css");
 @import url("Components/Quality-promise.css");
 @import url("Components/Quality-item.css");
-/* Nuevo componente Button */
 @import url("Components/Button.css");
-/* 4. Utilities (Clases de utilidad) */
-@import url("Utilities.css");
+@import url("Components/Content.css");
+@import url("Components/Main-footer.css"); 
+ 
+/* 4. Utilities */
+@import url("Utilities/Utilities.css");

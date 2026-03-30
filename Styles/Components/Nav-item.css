@@ -1,0 +1,17 @@
+/* =========================================
+   COMPONENTE: NAV ITEM (Enlaces individuales)
+   ========================================= */
+.nav-item__link {
+    font-family: var(--family-text);
+    font-size: 0.95rem;
+    color: var(--muted-foreground);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-item__link:hover {
+    color: var(--foreground);
+    background-color: var(--secondary-background-hover);
+}
