@@ -1,0 +1,113 @@
+/* styles/3_components/category.css */
+ 
+/* =========================================
+   COMPONENTES
+   ========================================= */
+
+/* Padding base para los contenedores principales (Móvil) */
+header, .hero-section, .categorias, footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* === 1. HEADER === */
+header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+header .logo { font-weight: bold; color: #333; text-decoration: none; font-size: 1.5em; }
+header nav { display: none; } /* Oculto en móvil */
+header nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
+header nav a { text-decoration: none; color: #555; font-size: 0.95em; transition: color 0.3s ease; }
+header nav a:hover { color: #000; }
+header .cart-link { text-decoration: none; color: #333; }
+header .cart-icon { font-size: 1.5em; }
+
+/* === 2. HERO SECTION === */
+.hero-section {
+    min-height: 70vh; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/hero.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    padding-top: 2rem; padding-bottom: 2rem;
+}
+.hero-content h1 { color: #ffffff; font-size: 2.2em; line-height: 1.2; margin-bottom: 15px; }
+.hero-content p { color: #f0f0f0; font-size: 1em; margin-bottom: 30px; }
+
+/* === 3. CATEGORÍAS === */
+.categorias { margin-top: 40px; margin-bottom: 40px; }
+.categorias h2 { font-size: 1.8em; line-height: 1.2; margin-bottom: 10px; color: #000; }
+.categorias > p { color: #666; font-size: 1em; margin-bottom: 30px; }
+.grid-categorias { display: flex; flex-direction: column; gap: 30px; }
+.tarjeta-categoria { display: flex; flex-direction: column; text-align: left; }
+.imagen-contenedor { width: 100%; aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; margin-bottom: 15px; }
+.imagen-contenedor img { width: 100%; height: 100%; object-fit: cover; }
+.tarjeta-categoria h3 { margin: 0 0 8px 0; font-size: 1.2em; color: #000; }
+.tarjeta-categoria p { margin: 0; font-size: 0.95em; color: #666; line-height: 1.5; }
+
+/* === 4. PROMESA DE CALIDAD === */
+.promesa-calidad { background-color: #fafafa; padding: 60px 20px 20px 20px; text-align: center; }
+.promesa-contenedor { max-width: 1200px; margin: 0 auto; }
+.promesa-calidad h2 { font-size: 1.8em; margin-bottom: 40px; color: #111; }
+.grid-promesas { display: flex; flex-direction: column; gap: 40px; }
+.promesa-item { display: flex; flex-direction: column; align-items: center; }
+.promesa-item .icono { font-size: 2.5em; margin-bottom: 15px; }
+.promesa-item h3 { font-size: 1.05em; color: #222; margin-bottom: 10px; }
+.promesa-item p { font-size: 0.9em; color: #666; line-height: 1.5; max-width: 250px; }
+
+/* === 5. FOOTER === */
+footer { padding-top: 50px; border-top: 1px solid #ddd; background-color: #fafafa; }
+.footer-contenedor { display: flex; flex-direction: column; gap: 40px; }
+.footer-enlaces { display: flex; flex-direction: column; gap: 30px; }
+.columna-footer h3 { font-size: 1.05em; color: #111; margin-bottom: 15px; }
+.columna-footer ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.columna-footer a { text-decoration: none; color: #666; transition: color 0.3s ease; }
+.columna-footer a:hover { color: #000; }
+.footer-boletin h3 { font-size: 1.1em; color: #111; margin-bottom: 10px; }
+.footer-boletin p { color: #666; font-size: 0.95em; margin-bottom: 15px; max-width: 500px; }
+.formulario-suscripcion { display: flex; flex-direction: column; gap: 10px; }
+.formulario-suscripcion input { padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em; outline: none; font-family: inherit; }
+.formulario-suscripcion input:focus { border-color: #777; }
+.formulario-suscripcion button { padding: 12px 20px; background-color: #f1f1f1; color: #333; border: none; border-radius: 6px; font-size: 1em; cursor: pointer; font-family: inherit; transition: background-color 0.3s ease; }
+.formulario-suscripcion button:hover { background-color: #e2e2e2; }
+.footer-derechos { margin-top: 40px; padding: 25px 0; border-top: 1px solid #eaeaea; text-align: center; color: #777; font-size: 0.9em; }
+
+/* === 6. TEXTOS LEGALES === */
+.contenido-texto { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+.contenido-texto h1 { font-size: 2.5em; margin-bottom: 20px; color: #111; }
+.contenido-texto h2 { font-size: 1.5em; margin-top: 40px; margin-bottom: 15px; color: #222; }
+.contenido-texto p, .contenido-texto ul { font-size: 1.05em; color: #444; margin-bottom: 20px; }
+.contenido-texto li { margin-bottom: 10px; }
+.contenido-texto a { color: #5b6cf9; text-decoration: underline; }
+
+/* =========================================
+   MEDIA QUERIES (Componentes Responsivos)
+   ========================================= */
+
+/* Tablets (>= 640px) */
+@media (min-width: 40rem) {
+    header, .hero-section, .categorias, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    header nav { display: block; }
+    .hero-content h1 { font-size: 3.5em; line-height: 1.1; }
+    .categorias h2 { font-size: 2.2em; }
+    .grid-categorias { flex-direction: row; justify-content: space-between; }
+    .tarjeta-categoria { flex: 1 1 calc(33.333% - 20px); }
+    .imagen-contenedor { aspect-ratio: 4 / 5; }
+    .grid-promesas { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+    .promesa-item { flex: 1 1 calc(50% - 40px); }
+    .footer-enlaces { flex-direction: row; gap: 80px; }
+    .formulario-suscripcion { flex-direction: row; }
+    .formulario-suscripcion input { width: 320px; }
+}
+
+/* Computadoras (>= 1024px) */
+@media (min-width: 64rem) {
+    header, .hero-section, .categorias, footer { padding-left: 2rem; padding-right: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto; }
+    .promesa-item { flex: 1; }
+    .footer-enlaces { gap: 120px; }
+}

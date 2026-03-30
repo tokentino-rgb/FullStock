@@ -1,0 +1,47 @@
+/* =========================================
+   COMPONENTE: QUALITY ITEM (Tarjeta individual)
+   ========================================= */
+
+.quality-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.quality-item__icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--foreground, #111);
+}
+
+.quality-item__title {
+    font-family: var(--family-heading, sans-serif);
+    font-size: 1.1rem;
+    color: var(--foreground, #222);
+    margin-bottom: 0.5rem;
+}
+
+.quality-item__description {
+    font-family: var(--family-text, sans-serif);
+    font-size: 0.95rem;
+    color: var(--muted-foreground, #666); /* Token para texto secundario */
+    line-height: 1.6;
+    max-width: 250px;
+}
+
+/* Tablets (>= 40rem) */
+@media (min-width: 40rem) {
+    .quality-item {
+        /* Ocupa el 50% del espacio menos el gap para formar 2 columnas */
+        flex: 1 1 calc(50% - 2.5rem); 
+    }
+}
+
+/* Computadoras (>= 64rem) */
+@media (min-width: 64rem) {
+    .quality-item {
+        /* Ocupa el 25% del espacio para formar 4 columnas en una sola fila */
+        flex: 1 1 calc(25% - 2.5rem); 
+    }
+}

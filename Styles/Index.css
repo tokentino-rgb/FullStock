@@ -1,0 +1,23 @@
+
+
+/* 1. Foundation (Bases) */
+@import url("Tokens.css");
+@import url("Reset.css");
+@import url("Global.css");
+ 
+
+/* 2. Layout (Estructura) */
+@import url("Layout/Container.css"); 
+@import url("Layout/Section.css"); 
+@import url("Layout/Section-sm.css");
+ 
+/* 3. Components */
+@import url("Components.css"); 
+@import url("Components/Categories.css");
+@import url("Components/Category.css");
+@import url("Components/Quality-promise.css");
+@import url("Components/Quality-item.css");
+/* Nuevo componente Button */
+@import url("Components/Button.css");
+/* 4. Utilities (Clases de utilidad) */
+@import url("Utilities.css");

@@ -1,0 +1,38 @@
+/* =========================================
+   COMPONENTE: CATEGORIES (Contenedor)
+   ========================================= */
+/* Nota: La clase .categories actúa como scope, el layout lo maneja .section y .container */
+
+.categories__header {
+    margin-bottom: 40px;
+}
+
+.categories__title {
+    font-size: 1.8em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.categories__subtitle {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 0; /* El margen inferior ya lo da el header */
+}
+
+.categories__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Tablets (>= 640px) */
+@media (min-width: 40rem) {
+    .categories__title {
+        font-size: 2.2em;
+    }
+    .categories__list {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+}

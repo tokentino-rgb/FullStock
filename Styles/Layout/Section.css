@@ -1,0 +1,24 @@
+/* =========================================
+   SECCIÓN PRINCIPAL (.section)
+   ========================================= */
+/* Default (Móvil) */
+.section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Pantallas medianas (>= 40rem) */
+@media (min-width: 40rem) {
+    .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+/* Pantallas grandes (>= 64rem) */
+@media (min-width: 64rem) {
+    .section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}

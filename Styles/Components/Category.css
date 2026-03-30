@@ -1,0 +1,52 @@
+/* =========================================
+   COMPONENTE: CATEGORY (Tarjeta Individual)
+   ========================================= */
+.category {
+    display: flex; 
+    flex-direction: column;
+    text-align: left;
+    text-decoration: none; /* Quitamos el subrayado porque ahora es un enlace */
+    color: inherit; /* Hereda el color del texto para que no se ponga azul */
+    transition: transform 0.3s ease;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+}
+
+.category__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px; 
+    overflow: hidden;
+    margin-bottom: 15px; 
+}
+
+.category__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.category__title { 
+    margin: 0 0 8px 0; 
+    font-size: 1.2em; 
+    color: #000; 
+}
+
+.category__description { 
+    margin: 0; 
+    font-size: 0.95em; 
+    color: #666; 
+    line-height: 1.5; 
+}
+
+/* Tablets (>= 640px) */
+@media (min-width: 40rem) {
+    .category {
+        flex: 1 1 calc(33.333% - 20px); 
+    }
+    .category__image {
+        aspect-ratio: 4 / 5; 
+    }
+}
