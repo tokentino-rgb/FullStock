@@ -1,33 +1,39 @@
 /* =========================================
-   COMPONENTE: QUALITY PROMISE (Contenedor)
+   COMPONENTE: QUALITY PROMISE (Grid Version)
    ========================================= */
-
 .quality-promise {
-    background-color: var(--muted-background); /* <- Cambio clave */
+    background-color: var(--muted-background);
     text-align: center;
 }
 
 .quality-promise__title {
-    font-family: var(--family-heading, sans-serif); /* Token tipográfico */
+    font-family: var(--family-heading);
     font-size: 1.8rem;
-    color: var(--foreground, #111); /* Token de color */
+    color: var(--foreground);
     margin-bottom: 2.5rem;
 }
 
 .quality-promise__list {
-    display: flex;
-    flex-direction: column; /* Móvil: 1 columna */
+    display: grid;
+    /* Móvil: 1 sola columna por defecto */
+    grid-template-columns: 1fr; 
     gap: 2.5rem;
 }
 
-/* Tablets (>= 40rem) y Desktop */
+/* Tablets (>= 40rem) */
 @media (min-width: 40rem) {
-    .quality-promise__title {
-        font-size: 2rem;
-    }
+    .quality-promise__title { font-size: 2rem; }
+    
     .quality-promise__list {
-        flex-direction: row;
-        flex-wrap: wrap; /* Permite que los elementos bajen de línea */
-        justify-content: center;
+        /* Tablet: 2 columnas del mismo tamaño */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Computadoras (>= 64rem) */
+@media (min-width: 64rem) {
+    .quality-promise__list {
+        /* Desktop: 4 columnas del mismo tamaño */
+        grid-template-columns: repeat(4, 1fr);
     }
 }

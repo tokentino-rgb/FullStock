@@ -1,0 +1,18 @@
+/* =========================================
+   LAYOUT: CATALOG 
+   ========================================= */
+.catalog-layout {
+    display: grid;
+    gap: 2rem;
+    /* En celulares, el filtro va arriba y los productos abajo (1 columna) */
+    grid-template-columns: 1fr; 
+}
+
+/* En computadoras (>= 64rem) */
+@media (min-width: 64rem) {
+    .catalog-layout {
+        /* Columna izquierda de 280px para el filtro, el resto para los productos */
+        grid-template-columns: 280px 1fr;
+        align-items: start; /* Evita que el filtro se estire verticalmente */
+    }
+}

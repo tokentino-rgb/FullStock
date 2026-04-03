@@ -2,7 +2,9 @@
    COMPONENTE: MAIN NAV (Contenedor de enlaces)
    ========================================= */
 .main-nav {
-    display: none; /* Oculto por defecto en móvil */
+    /* MÓVIL: Aparece debajo del logo/carrito en una nueva fila */
+    display: block;
+    margin-top: 1rem;
 }
 
 .main-nav__list {
@@ -10,15 +12,20 @@
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    justify-content: center; /* Centramos los enlaces en móvil */
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
-/* Tablets (>= 40rem) */
+/* Tablets (>= 40rem) y Computadoras */
 @media (min-width: 40rem) {
     .main-nav {
-        display: block;
-        margin-left: auto; /* Empuja la navegación hacia la derecha */
-        margin-right: 2rem; /* Lo separa del carrito */
+        /* DESKTOP: Posicionamiento absoluto para un centrado matemático perfecto */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 0; /* Reseteamos el margen del móvil */
     }
 }

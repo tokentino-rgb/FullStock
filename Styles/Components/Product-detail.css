@@ -1,0 +1,92 @@
+/* =========================================
+   COMPONENTE: PRODUCT DETAIL
+   ========================================= */
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr; /* Móvil: 1 sola columna */
+    gap: 2.5rem;
+}
+
+/* Tablet y Desktop (>= 40rem) */
+@media (min-width: 40rem) {
+    .product-detail {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem; 
+        align-items: start; 
+    }
+}
+/* --- Elementos Internos (BEM) --- */
+.product-detail__image {
+    width: 100%; /* Imagen fluida para que no desborde */
+    height: auto;
+    border-radius: 12px;
+    background-color: var(--muted-background); /* Útil si la imagen tiene transparencias en Dark Mode */
+}
+
+.product-detail__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.product-detail__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-detail__title {
+    font-family: var(--family-heading);
+    font-size: 2rem;
+    color: var(--foreground);
+    margin: 0;
+}
+
+.product-detail__price {
+    font-family: var(--family-text);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--foreground);
+    margin: 0;
+}
+
+.product-detail__description {
+    font-family: var(--family-text);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--muted-foreground);
+    margin: 0;
+}
+
+/* Hacemos que el botón ocupe el 100% de su contenedor */
+.product-detail__button {
+    width: 100%;
+}
+
+.product-detail__features {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-detail__features-title {
+    font-family: var(--family-text);
+    font-size: 0.875rem;
+    color: var(--primary-background); /* Color de acento azul/morado como en Figma */
+    margin: 0;
+    font-weight: 600;
+}
+
+.product-detail__features-list {
+    font-family: var(--family-text);
+    font-size: 0.95rem;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.product-detail__features-list li {
+    margin-bottom: 0.5rem;
+}

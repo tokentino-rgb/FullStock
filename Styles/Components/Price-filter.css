@@ -1,0 +1,45 @@
+/* =========================================
+   COMPONENTE: PRICE FILTER
+   ========================================= */
+.price-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--background);
+}
+
+.price-filter__title {
+    font-family: var(--family-heading);
+    font-size: 1.1rem;
+    color: var(--foreground);
+    margin: 0;
+}
+
+.price-filter__group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.price-filter__input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: var(--family-text);
+    background-color: var(--base-background);
+    color: var(--foreground);
+    outline: none;
+}
+
+.price-filter__input:focus {
+    border-color: var(--outline);
+}
+
+.price-filter__separator {
+    color: var(--muted-foreground);
+    font-weight: bold;
+}

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiénes Somos - Full Stock</title>
-   <link rel="stylesheet" href="../Styles/Index.css">
+    <title>Catálogo - Full Stock</title>
+    <link rel="stylesheet" href="../Styles/Index.css">
 </head>
-<body class="vertical-page-layout"></body>
-<header class="main-header">
+<body class="vertical-page-layout">
+
+   <header class="main-header">
         <div class="container main-header__container">
             
             <div class="main-header__top">
@@ -36,60 +37,86 @@
 
         </div>
     </header>
+    <main class="section">
+        <div class="container catalog-layout">
+            
+            <aside class="price-filter">
+                <h2 class="price-filter__title">Filtrar por precio</h2>
+                <div class="price-filter__group">
+                    <input type="number" class="price-filter__input" placeholder="Min" aria-label="Precio mínimo">
+                    <span class="price-filter__separator">-</span>
+                    <input type="number" class="price-filter__input" placeholder="Max" aria-label="Precio máximo">
+                </div>
+                <button class="button button--secondary button--sm">Aplicar</button>
+            </aside>
 
- <main class="section content">
-    <div class="container">
-        <h1>Quienes somos</h1>
-        <p>¡Bienvenido a Full Stock! Somos tu destino en línea para encontrar una increíble variedad de productos que se adaptan a tu estilo de vida. Nacimos de una idea simple: hacer que las compras en línea sean una experiencia fácil, rápida y satisfactoria para todos.</p>
+            <div class="products-grid">
+                
+                <a href="#" class="product">
+                    <div class="product__image-wrapper">
+                        <img src="../img/polos.jpg" alt="Polo React" class="product__image">
+                    </div>
+                    <div class="product__content">
+                        <p class="product__price">$20.00</p>
+                        <p class="product__description">Viste tu pasión por React con estilo y comodidad en cada línea de código.</p>
+                        <h3 class="product__title">Polo React Developer</h3>
+                    </div>
+                </a>
 
-        <h2>Nuestra Historia</h2>
-        <p>Full Stock comenzó como un pequeño proyecto entre un grupo de entusiastas de la tecnología y el buen diseño. Nos dimos cuenta de que a menudo era difícil encontrar productos de calidad en un solo lugar y con un servicio al cliente que realmente se preocupara. Decidimos cambiar eso.</p>
-        <p>Desde nuestro humilde comienzo, hemos crecido hasta convertirnos en una tienda en línea con un catálogo en constante expansión, pero nuestra misión principal sigue siendo la misma.</p>
+                <a href="#" class="product">
+                    <div class="product__image-wrapper">
+                        <img src="../img/tazas.jpg" alt="Taza JS" class="product__image">
+                    </div>
+                    <div class="product__content">
+                        <p class="product__price">$12.00</p>
+                        <p class="product__description">El café sabe mejor cuando estás resolviendo bugs en JavaScript.</p>
+                        <h3 class="product__title">Taza JavaScript</h3>
+                    </div>
+                </a>
 
-        <h2>Nuestra Misión</h2>
-        <p>Nuestra misión es ofrecerte una selección cuidadosamente curada de productos, combinada con una experiencia de compra sin complicaciones. Queremos que cada visita a Full Stock sea inspiradora y que cada compra te traiga satisfacción.</p>
+                <a href="#" class="product">
+                    <div class="product__image-wrapper">
+                        <img src="../img/stickers.jpg" alt="Pack de Stickers" class="product__image">
+                    </div>
+                    <div class="product__content">
+                        <p class="product__price">$5.00</p>
+                        <p class="product__description">Personaliza tu laptop con este increíble pack de stickers de desarrollo web.</p>
+                        <h3 class="product__title">Dev Stickers Pack</h3>
+                    </div>
+                </a>
 
-        <h2>Nuestros Valores</h2>
-        <p>Creemos firmemente en los pilares que nos han guiado desde el primer día:</p>
-        <ul>
-            <li><strong>Calidad Primero:</strong> Seleccionamos productos que no solo se ven bien, sino que también cumplen con nuestros estándares de calidad y durabilidad.</li>
-            <li><strong>Pasión por el Cliente:</strong> Tu satisfacción es nuestra máxima prioridad. Nuestro equipo está siempre dispuesto a ayudarte y a asegurarse de que tu experiencia sea excepcional.</li>
-            <li><strong>Innovación Constante:</strong> Estamos siempre buscando nuevas formas de mejorar nuestra plataforma, nuestro catálogo y nuestros servicios para ofrecerte lo mejor del mercado.</li>
-            <li><strong>Simplicidad:</strong> Creemos que comprar en línea debe ser un proceso sencillo y directo, desde la búsqueda del producto hasta la - entrega en tu puerta.</li>
-        </ul>
+            </div>
+        </div>
+    </main>
 
-        <p>Gracias por elegir Full Stock. ¡Te invitamos a explorar <a href="#">nuestro catálogo</a> y descubrir todo lo que tenemos para ofrecer!</p>
-   </div> </main>
-
-   <footer class="section main-footer">
+    <footer class="section main-footer">
         <div class="container">
             <div class="main-footer__container">
-                
                 <div class="main-footer__content">
+                    
                     <div class="links-group">
                         <h3 class="links-group__title">Tienda</h3>
                         <ul class="links-group__list">
+                            <li><a href="catalogo.html" class="links-group__link">Catálogo completo</a></li>
                             <li><a href="index.html#polos" class="links-group__link">Polos</a></li>
                             <li><a href="index.html#tazas" class="links-group__link">Tazas</a></li>
-                            <li><a href="index.html#stickers" class="links-group__link">Stickers</a></li>
                         </ul>
                     </div>
                     
                     <div class="links-group">
                         <h3 class="links-group__title">Compañía</h3>
                         <ul class="links-group__list">
-                            <li><a href="quienes-somos.html" class="links-group__link">Quienes somos</a></li>
-                            <li><a href="terminos.html" class="links-group__link">Términos y condiciones</a></li>
-                            <li><a href="privacidad.html" class="links-group__link">Privacidad</a></li>
+                            <li><a href="about.html" class="links-group__link">Quienes somos</a></li>
+                            <li><a href="terms.html" class="links-group__link">Términos y condiciones</a></li>
+                            <li><a href="privacy.html" class="links-group__link">Privacidad</a></li>
                         </ul>
                     </div>
 
                     <div class="links-group">
                         <h3 class="links-group__title">Conecta</h3>
                         <ul class="links-group__list">
-                            <li><a href="https://wa.me/" target="_blank" class="links-group__link">WhatsApp</a></li>
-                            <li><a href="https://www.facebook.com/" target="_blank" class="links-group__link">Facebook</a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank" class="links-group__link">Instagram</a></li>
+                            <li><a href="#" class="links-group__link">WhatsApp</a></li>
+                            <li><a href="#" class="links-group__link">Instagram</a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,8 +124,7 @@
                 <div class="main-footer__newsletter">
                     <form class="newsletter-form">
                         <h3 class="newsletter-form__title">Suscríbete a nuestro boletín</h3>
-                        <p class="newsletter-form__description">Recibe las últimas ofertas y descuentos en tu correo semanalmente.</p>
-                        
+                        <p class="newsletter-form__description">Recibe las últimas ofertas en tu correo semanalmente.</p>
                         <div class="newsletter-form__group">
                             <label for="email-boletin" class="sr-only">Correo electrónico</label>
                             <input type="email" id="email-boletin" class="newsletter-form__input" placeholder="correo@dominio.com" required>
@@ -106,9 +132,7 @@
                         </div>
                     </form>
                 </div>
-
             </div>
-
             <div class="main-footer__copyright">
                 <p>Todos los derechos reservados &copy; Full Stock</p>
             </div>

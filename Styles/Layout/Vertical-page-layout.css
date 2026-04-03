@@ -1,0 +1,13 @@
+/* =========================================
+   LAYOUT: VERTICAL PAGE (Sticky Footer)
+   ========================================= */
+.vertical-page-layout {
+    display: grid;
+    min-height: 100vh; /* Ocupa al menos el 100% del alto de la pantalla */
+    
+    /* Creamos 3 filas: 
+       1. auto: Lo que mida el header
+       2. 1fr: Ocupa todo el espacio sobrante (el contenido principal)
+       3. auto: Lo que mida el footer */
+    grid-template-rows: auto 1fr auto;
+}

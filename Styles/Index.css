@@ -6,10 +6,13 @@
 @import url("Foundation/Global.css");
  
 /* 2. Layout */
+/* 2. Layout */
 @import url("Layout/Container.css");
 @import url("Layout/Section.css");
 @import url("Layout/Section-sm.css");
- 
+@import url("Layout/Vertical-page-layout.css");
+@import url("Layout/Catalog-layout.css"); 
+
 /* 3. Components */
 @import url("Components/Main-header.css");
 @import url("Components/Main-nav.css");
@@ -22,6 +25,10 @@
 @import url("Components/Button.css");
 @import url("Components/Content.css");
 @import url("Components/Main-footer.css"); 
+@import url("Components/Product.css");
+@import url("Components/Products-grid.css");
+@import url("Components/Price-filter.css");
+@import url("Components/Product-detail.css");
  
 /* 4. Utilities */
 @import url("Utilities/Utilities.css");

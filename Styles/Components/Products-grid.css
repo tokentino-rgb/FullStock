@@ -1,0 +1,27 @@
+/* =========================================
+   COMPONENTE: PRODUCTS GRID
+   ========================================= */
+.products-grid {
+    display: grid;
+    /* Móvil: 1 columna */
+    grid-template-columns: 1fr;
+    gap: 24px; /* Extraído de tu código Figma */
+    width: 100%;
+}
+
+/* Tablets (>= 40rem) */
+@media (min-width: 40rem) {
+    .products-grid {
+        /* Tablet: 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Computadoras (>= 64rem) */
+@media (min-width: 64rem) {
+    .products-grid {
+        /* Desktop: 3 columnas */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+}

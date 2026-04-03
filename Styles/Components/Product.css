@@ -1,0 +1,72 @@
+/* =========================================
+   COMPONENTE: PRODUCT (Tarjeta de catálogo)
+   ========================================= */
+.product {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--border); /* Figma: #D9D9E0 */
+    border-radius: 12px;
+    background-color: var(--background); /* Figma: #FFFFFF */
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-hover);
+}
+
+.product__image-wrapper {
+    width: 100%;
+    /* Basado en los tamaños de Figma (ej. 240x320), es un ratio de 3:4 */
+    aspect-ratio: 3 / 4; 
+    background-color: var(--muted-background);
+    overflow: hidden;
+}
+
+.product__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px; /* Extraído de tu código Figma */
+    gap: 8px;      /* Extraído de tu código Figma */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.product__price {
+    font-family: var(--family-text);
+    font-weight: 500;
+    font-size: 1rem; /* 16px */
+    line-height: 1.5;
+    color: var(--foreground);
+    margin: 0;
+}
+
+.product__description {
+    font-family: var(--family-text);
+    font-weight: 400;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.43;
+    color: var(--muted-foreground); /* Figma: #60646C */
+    margin: 0;
+}
+
+.product__title {
+    font-family: var(--family-text);
+    font-weight: 500;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.43;
+    color: var(--foreground);
+    margin: 0;
+}
