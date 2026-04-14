@@ -1,0 +1,56 @@
+/* =========================================
+   COMPONENTE: ORDER SUCCESS (Confirmación)
+   ========================================= */
+.order-success {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 0; /* 48px en móvil */
+}
+
+@media (min-width: 64rem) {
+    .order-success {
+        padding: 4rem 0; /* 64px en escritorio */
+    }
+}
+
+.order-success__greeting {
+    font-family: var(--family-text);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-11); /* Color principal extraído de Figma */
+    margin: 0 0 0.5rem 0; /* gap de 8px */
+}
+
+.order-success__title {
+    font-family: var(--family-heading);
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    color: var(--foreground);
+    margin: 0 0 0.5rem 0; /* gap de 8px */
+    line-height: 1.1;
+}
+
+.order-success__message {
+    font-family: var(--family-text);
+    font-size: 1rem;
+    color: var(--muted-foreground);
+    margin: 0 0 3rem 0; /* gap de 48px hasta el seguimiento */
+    line-height: 1.5;
+}
+
+.order-success__tracking-label {
+    font-family: var(--family-text);
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    color: var(--foreground);
+    margin: 0 0 0.5rem 0; /* gap de 8px */
+}
+
+.order-success__tracking-number {
+    font-family: var(--family-text);
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    color: var(--accent-11);
+    margin: 0;
+}

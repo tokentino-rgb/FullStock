@@ -1,0 +1,17 @@
+/* =========================================
+   LAYOUT: CHECKOUT
+   ========================================= */
+.checkout-layout {
+    display: flex;
+    flex-direction: column; /* Móvil: Apilado verticalmente */
+    gap: 3rem; /* 48px según Figma */
+}
+
+/* En Desktop (>= 64rem), invertimos el orden para que el resumen no se quede abajo del todo y usamos CSS Grid */
+@media (min-width: 64rem) {
+    .checkout-layout {
+        display: grid;
+        grid-template-columns: 1fr 450px; /* Columna principal fluida, Resumen fijo a la derecha */
+        align-items: start; /* Para que las cajas no se estiren innecesariamente */
+    }
+}

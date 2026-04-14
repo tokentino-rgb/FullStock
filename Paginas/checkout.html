@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Full Stock</title>
+    <link rel="stylesheet" href="../Styles/Index.css">
+    <style>
+        /* Un pequeño ajuste exclusivo para esta página: el fondo general es un gris ligerísimo 
+           según el diseño de Figma para resaltar las cajas blancas */
+        body { background-color: rgba(0, 0, 85, 0.02); }
+        /* En Dark Mode mantenemos el fondo oscuro general */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: var(--background); }
+        }
+    </style>
+</head>
+<body class="vertical-page-layout">
+
+    <header class="main-header">
+        <div class="container main-header__container">
+            <div class="main-header__top">
+                <a href="index.html" class="main-header__logo">Full Stock</a>
+                <div class="main-header__cart">
+                    <a href="#" class="button button--icon button--ghost" aria-label="Ver carrito">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="nav-item"><a href="index.html" class="nav-item__link">Inicio</a></li>
+                    <li class="nav-item"><a href="catalogo.html" class="nav-item__link">Catálogo</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-item__link">Quienes somos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container checkout-layout">
+            
+            <div class="checkout__forms">
+                
+                <section class="form-section">
+                    <h2 class="form-section__title">Información de contacto</h2>
+                    <div class="form-field">
+                        <label for="email" class="form-field__label">Correo electrónico</label>
+                        <input type="email" id="email" class="form-field__input" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+                </section>
+
+                <hr style="border: 0; border-top: 1px solid var(--border); margin-bottom: 2.5rem;">
+
+                <section class="form-section">
+                    <h2 class="form-section__title">Información de envío</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="nombre" class="form-field__label">Nombre</label>
+                            <input type="text" id="nombre" class="form-field__input" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="apellido" class="form-field__label">Apellido</label>
+                            <input type="text" id="apellido" class="form-field__input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="direccion" class="form-field__label">Dirección</label>
+                        <input type="text" id="direccion" class="form-field__input" placeholder="Calle, número, departamento" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="ciudad" class="form-field__label">Ciudad</label>
+                            <input type="text" id="ciudad" class="form-field__input" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="codigo-postal" class="form-field__label">Código Postal</label>
+                            <input type="text" id="codigo-postal" class="form-field__input" required>
+                        </div>
+                    </div>
+                </section>
+                
+                <button class="button button--lg" style="width: 100%;" id="btn-pagar-movil">Continuar al pago</button>
+            </div>
+
+            <aside class="checkout__sidebar">
+                <div class="checkout-summary__title-wrapper">
+                    <h2 class="checkout-summary__title">Resumen de la orden</h2>
+                </div>
+                
+                <div class="checkout-summary">
+                    <div class="checkout-summary__list">
+                        <div class="checkout-summary__item">
+                            <div class="checkout-summary__image-wrapper">
+                                <img src="../img/polos.jpg" alt="Polo React" class="checkout-summary__image">
+                            </div>
+                            <div class="checkout-summary__item-details">
+                                <h3 class="checkout-summary__item-name">Polo React</h3>
+                                <div class="checkout-summary__item-price-row">
+                                    <span class="checkout-summary__qty">1 x</span>
+                                    <span class="checkout-summary__item-price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    <div class="checkout-summary__total-row">
+                        <p class="checkout-summary__total-label">Total</p>
+                        <p class="checkout-summary__total-value">$20.00</p>
+                    </div>
+
+                    <div class="checkout-summary__actions">
+                        <button class="button button--lg checkout-summary__button" id="btn-pagar-desktop">Continuar al pago</button>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="section main-footer">
+        <div class="container">
+            <div class="main-footer__container">
+                
+                <div class="main-footer__content">
+                    <div class="links-group">
+                        <h3 class="links-group__title">Tienda</h3>
+                        <ul class="links-group__list">
+                            <li><a href="index.html#polos" class="links-group__link">Polos</a></li>
+                            <li><a href="index.html#tazas" class="links-group__link">Tazas</a></li>
+                            <li><a href="index.html#stickers" class="links-group__link">Stickers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-group">
+                        <h3 class="links-group__title">Compañía</h3>
+                        <ul class="links-group__list">
+                            <li><a href="about.html" class="links-group__link">Quienes somos</a></li>
+                            <li><a href="terms.html" class="links-group__link">Términos y condiciones</a></li>
+                            <li><a href="privacy.html" class="links-group__link">Privacidad</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links-group">
+                        <h3 class="links-group__title">Conecta</h3>
+                        <ul class="links-group__list">
+                            <li><a href="https://wa.me/" target="_blank" class="links-group__link">WhatsApp</a></li>
+                            <li><a href="https://www.facebook.com/" target="_blank" class="links-group__link">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank" class="links-group__link">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main-footer__newsletter">
+                    <form class="newsletter-form">
+                        <h3 class="newsletter-form__title">Suscríbete a nuestro boletín</h3>
+                        <p class="newsletter-form__description">Recibe las últimas ofertas y descuentos en tu correo semanalmente.</p>
+                        
+                        <div class="newsletter-form__group">
+                            <label for="email-boletin" class="sr-only">Correo electrónico</label>
+                            <input type="email" id="email-boletin" class="newsletter-form__input" placeholder="correo@dominio.com" required>
+                            <button type="submit" class="button button--secondary">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="main-footer__copyright">
+                <p>Todos los derechos reservados &copy; Full Stock</p>
+            </div>
+        </div>
+    </footer>
+</html>

@@ -12,6 +12,7 @@
 @import url("Layout/Section-sm.css");
 @import url("Layout/Vertical-page-layout.css");
 @import url("Layout/Catalog-layout.css"); 
+@import url("Layout/Checkout-layout.css");
 
 /* 3. Components */
 @import url("Components/Main-header.css");
@@ -29,6 +30,10 @@
 @import url("Components/Products-grid.css");
 @import url("Components/Price-filter.css");
 @import url("Components/Product-detail.css");
- 
+@import url("Components/Cart-dropdown.css");
+@import url("Components/Form-field.css");
+@import url("Components/Checkout-summary.css");
+@import url("Components/Order-success.css");
+
 /* 4. Utilities */
 @import url("Utilities/Utilities.css");
