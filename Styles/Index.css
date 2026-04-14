@@ -34,6 +34,7 @@
 @import url("Components/Form-field.css");
 @import url("Components/Checkout-summary.css");
 @import url("Components/Order-success.css");
+@import url("Components/Cart-page.css");
 
 /* 4. Utilities */
 @import url("Utilities/Utilities.css");

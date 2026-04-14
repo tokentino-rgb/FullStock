@@ -63,6 +63,28 @@
     width: 100%;
 }
 
+/* =========================================
+   ANIMACIÓN RIPPLE (Botón de Compra)
+   ========================================= */
+
+/* 1. Definimos el efecto de onda usando box-shadow */
+@keyframes ripple {
+    0% {
+        /* Inicia pegado al botón, usando tu color de acento principal */
+        box-shadow: 0 0 0 0 var(--primary-background); 
+    }
+    100% {
+        /* Se expande 15px y se desvanece a transparente */
+        box-shadow: 0 0 0 15px transparent; 
+    }
+}
+
+/* 2. Lo aplicamos a la clase específica del botón de esta página */
+.product-detail__button {
+    width: 100%; /* Esto ya lo tenías, lo mantenemos */
+    /* Ejecuta la animación de onda por 2 segundos de forma infinita */
+    animation: ripple 2s infinite; 
+}
 .product-detail__features {
     margin-top: 1rem;
     display: flex;

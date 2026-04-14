@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - Full Stock</title>
+    <link rel="stylesheet" href="../Styles/Index.css">
+</head>
+<body class="vertical-page-layout">
+
+    <header class="main-header">
+        </header>
+
+    <main class="section">
+        <div class="container">
+            <h1 class="cart-page__title">Carrito de compras</h1>
+            
+            <div class="cart-page">
+                <div class="cart-list">
+                    <div class="cart-item">
+                        <div class="cart-item__image-wrapper">
+                            <img src="../img/polos.jpg" alt="Polo React" class="cart-item__image">
+                        </div>
+                        <div class="cart-item__content">
+                            <div class="cart-item__top">
+                                <h4 class="cart-item__title">Polo React</h4>
+                                <button class="cart-item__delete">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                </button>
+                            </div>
+                            <div class="cart-item__actions">
+                                <p class="cart-item__price">$20.00</p>
+                                <div class="cart-item__quantity">
+                                    <button class="cart-item__qty-btn">-</button>
+                                    <span class="cart-item__qty-number">1</span>
+                                    <button class="cart-item__qty-btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-page__footer">
+                    <div class="cart-total">
+                        <span style="font-family: var(--family-text); color: var(--muted-foreground);">Total estimado:</span>
+                        <strong style="font-size: 1.5rem; color: var(--foreground); margin-left: 0.5rem;">$20.00</strong>
+                    </div>
+                    <a href="checkout.html" class="button button--lg">Continuar al pago</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    </body>
+</html>

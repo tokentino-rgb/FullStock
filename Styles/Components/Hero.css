@@ -52,3 +52,40 @@
         font-size: 4rem;
     }
 }
+/* =========================================
+   ANIMACIONES DEL HERO
+   ========================================= */
+
+/* 1. Definimos la animación de desvanecer y subir */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Empieza 30px más abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+/* 2. Aplicamos al Título (Aparece inmediatamente) */
+.hero__title {
+    /* Ocultamos el elemento inicialmente para que no parpadee antes de la animación */
+    opacity: 0; 
+    /* Duración de 0.8s como indica la instrucción */
+    animation: fadeUp 0.8s ease forwards; 
+}
+
+/* 3. Aplicamos a la Descripción (Demora de 0.2s) */
+.hero__description {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.2s; 
+}
+
+/* 4. Aplicamos al Botón del Hero (Demora de 0.4s) */
+.hero__container .button {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
