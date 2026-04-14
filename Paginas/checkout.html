@@ -22,7 +22,7 @@
             <div class="main-header__top">
                 <a href="index.html" class="main-header__logo">Full Stock</a>
                 <div class="main-header__cart">
-                    <a href="#" class="button button--icon button--ghost" aria-label="Ver carrito">
+                    <a href="cart.html" class="button button--icon button--ghost" aria-label="Ver carrito">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="9" cy="21" r="1"></circle>
                             <circle cx="20" cy="21" r="1"></circle>
@@ -87,7 +87,7 @@
                     </div>
                 </section>
                 
-                <button class="button button--lg" style="width: 100%;" id="btn-pagar-movil">Continuar al pago</button>
+                <a href="order-confirmation.html" class="button button--lg" style="width: 100%; text-decoration: none; text-align: center; display: block; box-sizing: border-box;" id="btn-pagar-movil">Confirmar Orden</a>
             </div>
 
             <aside class="checkout__sidebar">
@@ -109,7 +109,7 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
 
                     <div class="checkout-summary__total-row">
                         <p class="checkout-summary__total-label">Total</p>
@@ -117,7 +117,7 @@
                     </div>
 
                     <div class="checkout-summary__actions">
-                        <button class="button button--lg checkout-summary__button" id="btn-pagar-desktop">Continuar al pago</button>
+                        <a href="order-confirmation.html" class="button button--lg checkout-summary__button" id="btn-pagar-desktop" style="text-decoration: none; text-align: center; display: block; box-sizing: border-box;">Confirmar Orden</a>
                     </div>
                 </div>
             </aside>
@@ -178,4 +178,14 @@
             </div>
         </div>
     </footer>
+    
+    <style>
+        @media (min-width: 64rem) {
+            #btn-pagar-movil { display: none !important; }
+        }
+        @media (max-width: 63.99rem) {
+            .checkout-summary__actions { display: none !important; }
+        }
+    </style>
+</body>
 </html>
